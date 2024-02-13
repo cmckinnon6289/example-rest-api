@@ -11,7 +11,10 @@ let students = [
     {id: 3, name: "Bomp", age: 19}
 ];
 
-app.get('/api/port', (req, res) => {res.send(PORT)})
+app.get('/api/port', (req, res) => {
+    const portobj = { portId: PORT};
+    res.send(portobj)
+})
 
 app.get('/api/students', (req, res) => {res.send(students)});
 
